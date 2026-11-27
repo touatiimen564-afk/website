@@ -268,6 +268,8 @@ nav a.active{color:#fff;background:var(--grad)}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
 .p-card{overflow:hidden;display:flex;flex-direction:column}
 .p-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:linear-gradient(135deg,#3a0f6e,#7a1f5c)}
+.p-media.logo{background:#fff}
+.p-media.logo img{object-fit:contain;padding:18px}
 .p-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
 .p-card:hover .p-media img{transform:scale(1.06)}
 .p-media .ph{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:2.2rem;color:rgba(255,255,255,.85);text-align:center;padding:12px;letter-spacing:-.02em}
@@ -654,7 +656,7 @@ const PROJECTS = [
     d:{fr:"Gestion des réseaux sociaux de la plateforme : visuels d'offres d'emploi, annonces de webinaires, événements (Challenge.11) et contenus éducatifs sur les tendances du e-learning, dans une charte graphique cohérente.",
        en:"Managed the platform's social media: job-offer visuals, webinar announcements, events (Challenge.11) and educational content on e-learning trends, all within a consistent visual identity.",
        ar:"إدارة مواقع التواصل للمنصة: تصاميم عروض الشغل، الإعلان عن الندوات الرقمية، الفعاليات (Challenge.11) ومحتوى تعليمي حول توجهات التعليم الإلكتروني ضمن هوية بصرية متناسقة."} },
-  { id:"aziza", img:"assets/aziza.jpg", link:"",
+  { id:"aziza", img:"aziza.png", link:"",
     tags:[["Content marketing","v"],["Social media","c"]],
     t:{fr:"Aziza — Produits MDD « Cœur d'Or »",
        en:"Aziza — « Cœur d'Or » private-label products",
@@ -662,7 +664,7 @@ const PROJECTS = [
     d:{fr:"Développement de nouveaux produits de la marque de distributeur « Cœur d'Or » (pâte à tartiner, chocolat) et adaptation de la stratégie de content marketing : visuels promotionnels, stand PLV et recettes pour Instagram.",
        en:"Development of new products for the « Cœur d'Or » private label (spreads, chocolate) and adaptation of the content marketing strategy: promotional visuals, in-store display stand and Instagram recipe posts.",
        ar:"تطوير منتجات جديدة لعلامة « Cœur d'Or » (معجون الشوكولاتة، الشوكولاتة) وملاءمة استراتيجية التسويق بالمحتوى: تصاميم ترويجية، رواق عرض ووصفات على إنستغرام."} },
-  { id:"vesper", img:"assets/vesper-xmas.jpg", link:"",
+  { id:"vesper", img:"Vesper%20Fragrances.png", link:"",
     tags:[["Luxe","v"],["Stratégie social media","c"]],
     t:{fr:"Vesper Fragrances — Marque de luxe",
        en:"Vesper Fragrances — Luxury brand",
@@ -670,7 +672,7 @@ const PROJECTS = [
     d:{fr:"Création d'une marque de bougies et parfums d'intérieur de luxe : identité, positionnement, stratégie marketing et campagnes social media saisonnières (Halloween, Ramadan, Noël) à l'esthétique élégante et moderne.",
        en:"Creation of a luxury candle and home-fragrance brand: identity, positioning, marketing strategy and seasonal social media campaigns (Halloween, Ramadan, Christmas) with an elegant, modern look.",
        ar:"إنشاء علامة فاخرة للشموع والعطور المنزلية: الهوية، التموضع، الاستراتيجية التسويقية وحملات موسمية على مواقع التواصل (هالوين، رمضان، رأس السنة) بطابع أنيق وعصري."} },
-  { id:"pawtopia", img:"assets/pawtopia-products.jpg", link:"",
+  { id:"pawtopia", img:"PawTopia%20logo.png", link:"",
     tags:[["Branding","v"],["Marketing visuel","c"]],
     t:{fr:"Pawtopia — Animalerie intelligente",
        en:"Pawtopia — Smart pet shop",
@@ -678,7 +680,7 @@ const PROJECTS = [
     d:{fr:"Marque combinant soin animalier et technologie : identité de marque, palette de couleurs, cartes de visite, visuels produits (distributeur intelligent, litière autonettoyante, traceur GPS) et flyers.",
        en:"A brand blending pet care and technology: brand identity, colour palette, business cards, product visuals (smart feeder, self-cleaning litter box, GPS tracker) and flyers.",
        ar:"علامة تجمع بين رعاية الحيوانات والتكنولوجيا: هوية بصرية، لوحة ألوان، بطاقات أعمال، تصاميم المنتجات (موزّع طعام ذكي، صندوق فضلات ذاتي التنظيف، جهاز تتبع GPS) ومطويات."} },
-  { id:"maison", img:"assets/maison-products.jpg", link:"",
+  { id:"maison", img:"Maison%20cerisette.png", link:"",
     tags:[["Branding","v"],["Packaging","c"]],
     t:{fr:"Maison Cerisette — Marque de A à Z",
        en:"Maison Cerisette — Brand from scratch",
@@ -686,22 +688,14 @@ const PROJECTS = [
     d:{fr:"Marque inspirée de la ferme de cerises de ma famille : nom, logo et ses déclinaisons, gamme de produits (confiture, sirop, cerises séchées), storytelling, packaging et présence sur les réseaux sociaux.",
        en:"A brand inspired by my family's cherry farm: name, logo and its variations, product line (jam, syrup, dried cherries), storytelling, packaging and social media presence.",
        ar:"علامة مستوحاة من مزرعة الكرز لعائلتي: الاسم، الشعار وتنويعاته، مجموعة المنتجات (مربى، شراب، كرز مجفف)، سرد القصة، التغليف والحضور على مواقع التواصل."} },
-  { id:"icyjoys", img:"assets/icyjoys-flyers.jpg", link:"",
+  { id:"icyjoys", img:"icy%20joys.png", link:"",
     tags:[["Branding","v"],["Design graphique","c"]],
     t:{fr:"Icy Joys — Branding & design graphique",
        en:"Icy Joys — Branding & graphic design",
        ar:"Icy Joys — هوية بصرية وتصميم غرافيكي"},
     d:{fr:"Marque de glacier créée durant ma formation en design graphique (Opus Lab, titre « Meilleur projet ») : logo, cartes de visite, tabliers et t-shirts, flyers promotionnels et page Facebook.",
        en:"Ice-cream shop brand created during my graphic design training (Opus Lab, awarded “Best Project”): logo, business cards, aprons and T-shirts, promotional flyers and Facebook page.",
-       ar:"علامة محل مثلجات أنجزتها خلال تكويني في التصميم الغرافيكي (Opus Lab، لقب « أفضل مشروع »): شعار، بطاقات أعمال، مآزر وقمصان، مطويات ترويجية وصفحة فيسبوك."} },
-  { id:"elearning", img:"", link:"",
-    tags:[["Stratégie de contenu","v"],["E-learning","c"]],
-    t:{fr:"Stratégie de contenu digitale — plateforme e-learning",
-       en:"Digital content strategy — e-learning platform",
-       ar:"استراتيجية المحتوى الرقمي — منصة تعليم إلكتروني"},
-    d:{fr:"Projet de fin d'études de ma Licence en Sciences de Gestion (Marketing) : étude et optimisation de la création de contenu digital, analyse comparative, recommandations stratégiques et pistes d'amélioration de la présence digitale.",
-       en:"Final-year project of my Bachelor's in Management Science (Marketing): study and optimisation of digital content creation, benchmark analysis, strategic recommendations and ways to improve digital presence.",
-       ar:"مشروع نهاية الدراسة في الإجازة في علوم التصرف (تسويق): دراسة وتحسين إنتاج المحتوى الرقمي، تحليل مقارن، توصيات استراتيجية واقتراحات لتعزيز الحضور الرقمي."} }
+       ar:"علامة محل مثلجات أنجزتها خلال تكويني في التصميم الغرافيكي (Opus Lab، لقب « أفضل مشروع »): شعار، بطاقات أعمال، مآزر وقمصان، مطويات ترويجية وصفحة فيسبوك."} }
 ];
 
 /* cat : "marketing" | "cm" | "design" */
@@ -932,7 +926,7 @@ $('#themeToggle').addEventListener('click', () => { theme = theme === 'dark' ? '
 function placeholder(text){ return `<div class="ph" aria-hidden="true">${esc(text)}</div>`; }
 function mediaHTML(img, label){
   return img
-    ? `<img src="${esc(img)}" alt="${esc(label)}" loading="lazy" decoding="async" onerror="this.outerHTML=window.__ph('${esc(label).replace(/'/g,'')}')">`
+    ? `<img src="${esc(img)}" alt="${esc(label)}" loading="lazy" decoding="async" onerror="this.outerHTML=window.__ph('${esc(String(label).replace(/['"]/g,''))}')">`
     : placeholder(label);
 }
 window.__ph = placeholder;
@@ -966,7 +960,7 @@ function renderSkills(){
 function renderProjects(){
   $('#projectsGrid').innerHTML = PROJECTS.map(p => `
     <article class="glass p-card hoverable reveal">
-      <div class="p-media">${mediaHTML(p.img, p.t[lang].split(' — ')[0])}</div>
+      <div class="p-media${p.img && /\.png$/i.test(p.img) ? ' logo' : ''}">${mediaHTML(p.img, p.t[lang].split(' — ')[0])}</div>
       <div class="p-body">
         <div class="tags">${p.tags.map(([t,c]) => `<span class="tag ${c==='v'?'violet':''}">${esc(t)}</span>`).join('')}</div>
         <h3>${esc(p.t[lang])}</h3>
@@ -1019,7 +1013,7 @@ const COCOON = {
       d:{fr:"Analyse, benchmark et recommandations pour structurer et améliorer la présence digitale d'une marque.",
          en:"Analysis, benchmarking and recommendations to structure and improve a brand's digital presence.",
          ar:"تحليل ومقارنة وتوصيات لهيكلة الحضور الرقمي للعلامة وتحسينه."},
-      links:[ ["#projets",{fr:"Projet e-learning",en:"E-learning project",ar:"مشروع التعليم الإلكتروني"}],
+      links:[ ["#projets",{fr:"Stratégie de marque — Vesper",en:"Brand strategy — Vesper",ar:"استراتيجية العلامة — Vesper"}],
               ["#competences",{fr:"Compétences stratégie & KPI",en:"Strategy & KPI skills",ar:"مهارات الاستراتيجية والمؤشرات"}],
               ["#apropos",{fr:"Mon approche",en:"My approach",ar:"منهجي"}] ] },
     { id:"cluster-content", tag:"#ContentMarketing",
